@@ -4,7 +4,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Laba_9_W
+namespace L9
 {
     public class Array_Class<T>
     {
