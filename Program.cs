@@ -1,0 +1,56 @@
+﻿//Создать классы-наследники из 8 ЛР, хранящие логины и пароли.
+//При регистрации пользователей логины и пароли добавляются в массивы.
+
+using System;
+using System.Collections.Generic;
+
+namespace Laba_9_W
+{
+    public class Array_Class<T>
+    {
+        List<T> list = new List<T> { };
+
+        public Array_Class()
+        {
+        }
+        public void AddElem(T item) 
+        {
+            list.Add(item);
+        }
+        public void DeleteElem(T item) 
+        {
+            list.Remove(item);
+        }
+        public T GetElem(int index) 
+        {
+            return list[index];
+        }
+        public int GetLength() 
+        {
+            return list.Count;
+        }
+    }
+
+    public class Login : Array_Class<string>
+    {
+    }
+
+    public class Password<T> : Array_Class<T>
+    {
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Login login = new Login();
+            login.AddElem("Eckhart");
+            login.AddElem("Tolle");
+
+            Password<string> password = new Password<string>();
+            password.AddElem("Z223Ik332l2L");
+            password.AddElem("L332Ki223z3Z");
+
+            Console.WriteLine(String.Format("{0} {1}", login.GetElem(0), login.GetElem(1)));
+        }
+    }
+}
