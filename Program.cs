@@ -49,8 +49,6 @@ namespace L9
             Password<string> password = new Password<string>();
             password.AddElem("Z223Ik332l2L");
             password.AddElem("L332Ki223z3Z");
-
-            Console.WriteLine(String.Format("{0} {1}", login.GetElem(0), login.GetElem(1)));
         }
     }
 }
