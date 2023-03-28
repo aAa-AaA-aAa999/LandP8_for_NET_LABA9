@@ -27,7 +27,7 @@ namespace L9
         }
         public int GetLength() 
         {
-            return list.Count;
+            return list.Lenght;
         }
     }
 
